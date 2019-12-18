@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://github.com/minikin/darty"> Darty
+  <a href="https://github.com/minikin/darty">WIP: Darty
   </a>
 </h1>
 
