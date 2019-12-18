@@ -1,11 +1,11 @@
-name: darter_dart
+name: darty
 description: A new Flutter package project.
 version: 0.0.1
 author: Sasha Prokhorenko <djminikin@gmail.com>
-homepage: https://github.com/minikin/darter_dart
+homepage: https://github.com/minikin/darty
 
 environment:
-  sdk: '>=2.6.0-dev <3.0.0'
+  sdk: '>=2.7.0 <3.0.0'
 
 dev_dependencies:
   pedantic: 1.8.0+1

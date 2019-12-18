@@ -1,3 +1,3 @@
-library darter_dart;
+library darty;
 
 export './src/bool_extensions.dart';
