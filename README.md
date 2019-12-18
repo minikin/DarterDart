@@ -1,14 +1,56 @@
-# darter_dart
+<h1 align="center">
+  <a href="https://github.com/minikin/darty"> Darty
+  </a>
+</h1>
 
-A new Flutter package project.
+<p align="center">
+ A handy collection of Dart extensions to boost your productivity.
+</p>
 
-## Getting Started
+<p align="center">
+  <a href="https://github.com/minikin/flutter_photos_fetcher/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Darty is released under the MIT license." />
+  </a>
+  <a href="https://app.bitrise.io/app/1851edf4119f7170">
+    <img src="https://app.bitrise.io/app/1851edf4119f7170/status.svg?token=7gxXnwvmAESiK0oXsL7row&branch=develop" alt="Current Build Status." />
+  </a>
+    <a href="https://facebook.github.io/react-native/docs/contributing">
+    <img src="https://img.shields.io/badge/PRs-welcome-blue.svg" alt="PRs welcome!" />
+  </a>
+</p>
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## Contents
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+- [Contents](#contents)
+- [📋 Requirements](#%f0%9f%93%8b-requirements)
+- [🎉 Installation](#%f0%9f%8e%89-installation)
+- [🎯 Examples](#%f0%9f%8e%af-examples)
+- [⛑ FAQ](#%e2%9b%91-faq)
+- [📄 License](#%f0%9f%93%84-license)
+
+## 📋 Requirements
+
+- Dart: 2.7.0+
+
+## 🎉 Installation
+
+Add this to your package's pubspec.yaml file:
+
+```yaml
+dependencies:
+  darty: ^0.0.1
+```
+
+## 🎯 Examples
+
+__WIP__
+
+
+## ⛑ FAQ
+
+If you have any questions ping me on twitter: [@minikin](https://twitter.com/minikin)
+
+## 📄 License
+
+Darty is available under the MIT license.
+See the [LICENSE](https://github.com/minikin/darty/blob/develop/LICENSE) file for more info.
