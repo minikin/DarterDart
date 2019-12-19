@@ -1,5 +1,6 @@
 <h1 align="center">
-  <a href="https://github.com/minikin/darty">WIP: Darty
+  <a href="https://github.com/minikin/darty">Darty
+  <img src="https://github.com/minikin/darty/blob/develop/assets/DartyLogo.png?raw=true" alt="Darty Logo!" />
   </a>
 </h1>
 
@@ -43,8 +44,7 @@ dependencies:
 
 ## 🎯 Examples
 
-__WIP__
-
+**WIP**
 
 ## ⛑ FAQ
 
