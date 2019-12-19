@@ -11,6 +11,11 @@ extension BoolExtention on bool {
   ///        false.toggle() -> true
   ///        true.toggle() -> false
   ///
-  // TODO: -  I don't how to implement it.
-  // toggle() => this = !this;
+  // toggle() {
+  //   if (this == true) {
+  //     this = false;
+  //   } else {
+  //     this = true;
+  //   }
+  // }
 }
