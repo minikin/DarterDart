@@ -3,6 +3,8 @@ description: A handy collection of Dart extensions to boost your productivity..
 version: 0.0.1
 author: Sasha Prokhorenko <djminikin@gmail.com>
 homepage: https://github.com/minikin/darty
+repository: https://github.com/minikin/darty.git
+issue_tracker: https://github.com/minikin/darty/issues
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
