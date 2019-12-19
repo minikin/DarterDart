@@ -1,36 +1,22 @@
 import 'package:characters/characters.dart';
 
 extension StringExtention on String {
-  /// Returns characters of a string.
-  Iterable<String> get chars => Characters(this);
-
-  /// Capitalize the given string
-  ///
-  /// Example :
+  /// Reverse a string.
   ///
   /// ```dart
-  /// print('apple'.capitalize()) // Apple
-  /// print('APPLE'.capitalize()) // Apple
-  /// print('Apple'.capitalize()) // Apple
+  /// print('Apple'.reversed) // elppa
   /// ```
   ///
-  String capitalize() =>
-      this.substring(0, 1).toUpperCase() + this.substring(1).toLowerCase();
+  String get reversed {
+    final charRange = Characters(this).iteratorAtEnd;
+    final buffer = StringBuffer();
 
-  /// Decapitalize the given string
-  ///
-  /// Example :
-  ///
-  /// ```dart
-  /// print('Apple'.decapitalize()) // apple
-  /// print('APPLE'.decapitalize()) // apple
-  /// print('apple'.decapitalize()) // apple
-  /// ```
-  ///
-  String decapitalize() => substring(0, 1).toLowerCase() + substring(1);
+    while (charRange.moveBack()) {
+      buffer.write(charRange.current);
+    }
 
-  /// Returns a new string with characters in reversed order.
-  String get reversed => this.split('').reversed.join();
+    return buffer.toString();
+  }
 
   /// Adding a prefix to a string
   ///
@@ -40,6 +26,7 @@ extension StringExtention on String {
   /// print(fullURL);
   /// prints: https://www.example.com
   /// ```
+  ///
   String withPrefix(String prefix) {
     if (startsWith(prefix)) {
       return this;
@@ -54,10 +41,8 @@ extension StringExtention on String {
   /// print('Words count: ${phrase.wordCount}');
   /// prints: 4
   /// ```
-  int get wordCount {
-    final regex = RegExp(r'(\w+)');
-    return regex.allMatches(this).length;
-  }
+  ///
+  int get wordCount => RegExp(r'(\w+)').allMatches(this).length;
 
   /// Replacing a search term in String
   ///
@@ -68,10 +53,53 @@ extension StringExtention on String {
   /// prints:
   /// How much wood should a woodchuck chuck if a woodchuck should chuck wood?
   /// ```
-  String replacingOccurrences(
-    String search,
-    String replacement,
-  ) {
-    return replaceAll(RegExp('$search'), replacement);
+  ///
+  String replacingOccurrences(String search, String replacement) =>
+      replaceAll(RegExp('$search'), replacement);
+
+  /// Returns characters of a string.
+  ///
+  /// ```dart
+  /// print('apple'.chars // Apple
+  /// ```
+  ///
+  Iterable<String> get chars => Characters(this);
+
+  /// Capitalize a string
+  ///
+  /// ```dart
+  /// print('apple'.capitalize()) // Apple
+  /// print('APPLE'.capitalize()) // Apple
+  /// print('Apple'.capitalize()) // Apple
+  /// ```
+  ///
+  String capitalize() {
+    switch (length) {
+      case 0:
+        return this;
+      case 1:
+        return toUpperCase();
+      default:
+        return substring(0, 1).toUpperCase() + substring(1);
+    }
+  }
+
+  /// Decapitalize a string
+  ///
+  /// ```dart
+  /// print('Apple'.decapitalize()) // apple
+  /// print('APPLE'.decapitalize()) // apple
+  /// print('apple'.decapitalize()) // apple
+  /// ```
+  ///
+  String decapitalize() {
+    switch (length) {
+      case 0:
+        return this;
+      case 1:
+        return toLowerCase();
+      default:
+        return substring(0, 1).toLowerCase() + substring(1);
+    }
   }
 }

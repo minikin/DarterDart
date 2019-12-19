@@ -11,11 +11,5 @@ extension BoolExtention on bool {
   ///        false.toggle() -> true
   ///        true.toggle() -> false
   ///
-  // toggle() {
-  //   if (this == true) {
-  //     this = false;
-  //   } else {
-  //     this = true;
-  //   }
-  // }
+  // bool get toggle => this = !this;
 }
