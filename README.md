@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://github.com/minikin/darty">Darty
+  <a href="https://github.com/minikin/darty">
   <img src="https://github.com/minikin/darty/blob/develop/assets/DartyLogo.png?raw=true" alt="Darty Logo!" />
   </a>
 </h1>
