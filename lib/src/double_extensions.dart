@@ -20,7 +20,7 @@ extension DoubleExtention on double {
   /// Calculate the diameter of a circle with the given [radius].
   ///
   /// ```dart
-  /// print(calculateCircleDiameter(5)) -> 10.0
+  /// print(5.0.calculateCircleDiameter) -> 10.0
   /// ```
   ///
   double get calculateCircleDiameter => 2 * this;
