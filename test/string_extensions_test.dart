@@ -50,5 +50,10 @@ void main() {
       expect('Apple'.decapitalize(), 'apple');
       expect('apple'.decapitalize(), 'apple');
     });
+
+    test('.isValidEmail', () {
+      expect('test@test.com'.isValidEmail, true);
+      expect('apple'.isValidEmail, false);
+    });
   });
 }
