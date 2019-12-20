@@ -4,7 +4,7 @@ extension NumExtention on num {
   /// Calculate the circumference of a circle with the given [radius].
   ///
   /// ```dart
-  /// print(2.329.calculateCircumference) -> 31.41592653589793
+  /// print(2.329.calculateCircumference) -> 14.633538580421257
   /// print(5.calculateCircumference) -> 31.41592653589793
   /// ```
   ///
@@ -22,9 +22,20 @@ extension NumExtention on num {
   /// Calculate the diameter of a circle with the given [radius].
   ///
   /// ```dart
-  /// print(2.329.calculateCircleDiameter) -> 10.0
+  /// print(2.329.calculateCircleDiameter) -> 4.658
   /// print(5.calculateCircleDiameter) -> 10
   /// ```
   ///
   num get calculateCircleDiameter => 2 * this;
+
+  /// Calculate the area of a square or rectangle with length [a] and/or length[b].
+  ///
+  /// ```dart
+  /// print(2.329.calculateSquareArea()) -> 5.424241000000001
+  /// print(2.329.calculateSquareArea(b: 4.6)) -> 10.7134
+  /// print(2.calculateSquareArea()) -> 4
+  /// print(2.calculateSquareArea(b: 4.6)) -> 9.2
+  /// ```
+  ///
+  num calculateSquareArea({num b}) => b == null ? this * this : this * b;
 }
