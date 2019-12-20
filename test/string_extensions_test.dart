@@ -4,37 +4,37 @@ import 'package:darty/darty.dart';
 
 void main() {
   group('String Extensions', () {
-    test('.reversed', () {
+    test('Test reversed', () {
       expect(''.reversed, '');
       expect('apple'.reversed, 'elppa');
       expect('apple🍏'.reversed, '🍏elppa');
     });
 
-    test('.withPrefix()', () {
+    test('Test withPrefix()', () {
       expect('www.example.com'.withPrefix(''), 'www.example.com');
       expect(
           'www.example.com'.withPrefix('https://'), 'https://www.example.com');
     });
 
-    test('.wordCount', () {
+    test('Test wordCount', () {
       expect(''.wordCount, 0);
       expect(', . ` ? / @ ! & *% #'.wordCount, 0);
       expect('The sun in Berlin'.wordCount, 4);
     });
 
-    test('.replacingOccurrences()', () {
+    test('Test replacingOccurrences()', () {
       expect(
           '''How much wood would a woodchuck chuck if a woodchuck would chuck wood?'''
               .replacingOccurrences('would', 'should'),
           '''How much wood should a woodchuck chuck if a woodchuck should chuck wood?''');
     });
 
-    test('.chars', () {
+    test('Test chars', () {
       expect('apple1969'.chars, ['a', 'p', 'p', 'l', 'e', '1', '9', '6', '9']);
       expect('😀€∭ФЙ1J'.chars, ['😀', '€', '∭', 'Ф', 'Й', '1', 'J']);
     });
 
-    test('.capitalize()', () {
+    test('Test capitalize()', () {
       expect(''.capitalize(), '');
       expect('12345'.capitalize(), '12345');
       expect('a'.capitalize(), 'A');
@@ -43,7 +43,7 @@ void main() {
       expect('APPLE'.capitalize(), 'APPLE');
     });
 
-    test('.decapitalize()', () {
+    test('Test decapitalize()', () {
       expect(''.decapitalize(), '');
       expect('12345'.decapitalize(), '12345');
       expect('A'.decapitalize(), 'a');
@@ -51,7 +51,7 @@ void main() {
       expect('apple'.decapitalize(), 'apple');
     });
 
-    test('.isValidEmail', () {
+    test('Test isValidEmail', () {
       expect('test@test.com'.isValidEmail, true);
       expect('apple'.isValidEmail, false);
     });
