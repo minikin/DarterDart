@@ -107,4 +107,60 @@ extension StringExtention on String {
   bool get isValidEmail => RegExp(
           r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
       .hasMatch(this);
+
+  /// Checks if the given string is a palindrome.
+  ///
+  /// ```dart
+  /// print('lol'.isPalindrome) -> true
+  /// print('Berlin'.isPalindrome) -> false
+  /// ```
+  ///
+  bool isPalindrome(String string) {
+    for (var i = 0; i < string.length / 2; i++) {
+      if (string[i] != string[string.length - 1 - i]) return false;
+    }
+    return true;
+  }
+
+  /// Replaces chars of a String with [replace].
+  ///
+  /// The default value of [replaceChar] is *.
+  /// [begin] determines the start of the 'replacing'. If [begin] is null, it starts from index 0.
+  /// [end] defines the end of the 'replacing'. If [end] is null, it ends at String length divided by 2.
+  /// If String is empty or consists of only 1 char, the method returns null.
+  ///
+  ///  ```dart
+  /// print('1234567890'.replaceCharacters) -> *****67890
+  /// print('1234567890'.replaceCharacters) -> *****67890
+  /// print('1234567890'.replaceCharacters) -> *****67890
+  /// ```
+  String replaceCharacters({
+    int begin = 0,
+    int end,
+    String replaceChar = '*',
+  }) {
+    final buffer = StringBuffer();
+    if (this.length <= 1) {
+      return null;
+    }
+    if (end == null) {
+      end = (this.length / 2).round();
+    } else {
+      if (end > this.length) {
+        end = this.length;
+      }
+    }
+    for (var i = 0; i < this.length; i++) {
+      if (i >= end) {
+        buffer.write(String.fromCharCode(this.runes.elementAt(i)));
+        continue;
+      }
+      if (i >= begin) {
+        buffer.write(replaceChar);
+        continue;
+      }
+      buffer.write(String.fromCharCode(this.runes.elementAt(i)));
+    }
+    return buffer.toString();
+  }
 }
