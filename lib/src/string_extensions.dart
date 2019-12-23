@@ -115,9 +115,9 @@ extension StringExtention on String {
   /// print('Berlin'.isPalindrome) -> false
   /// ```
   ///
-  bool isPalindrome(String string) {
-    for (var i = 0; i < string.length / 2; i++) {
-      if (string[i] != string[string.length - 1 - i]) return false;
+  bool get isPalindrome {
+    for (var i = 0; i < this.length / 2; i++) {
+      if (this[i] != this[this.length - 1 - i]) return false;
     }
     return true;
   }
