@@ -130,9 +130,9 @@ extension StringExtention on String {
   /// If String is empty or consists of only 1 char, the method returns null.
   ///
   ///  ```dart
-  /// print('1234567890'.replaceCharacters) -> *****67890
-  /// print('1234567890'.replaceCharacters) -> *****67890
-  /// print('1234567890'.replaceCharacters) -> *****67890
+  /// print('1234567890'.replaceCharacters()) -> *****67890
+  /// print('1234567890'.replaceCharacters(begin: 3, end: 8)) -> 123*****90
+  /// print('1234567890'.eplaceCharacters(end: 4, replaceChar: '#')) -> ####567890
   /// ```
   String replaceCharacters({
     int begin = 0,

@@ -55,5 +55,12 @@ void main() {
       expect('test@test.com'.isValidEmail, true);
       expect('apple'.isValidEmail, false);
     });
+
+    test('Test replaceCharacters', () {
+      expect('1234567890'.replaceCharacters(), '*****67890');
+      expect('1234567890'.replaceCharacters(begin: 3, end: 8), '123*****90');
+      expect('1234567890'.replaceCharacters(end: 4, replaceChar: '#'),
+          '####567890');
+    });
   });
 }
