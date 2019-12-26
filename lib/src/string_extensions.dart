@@ -163,4 +163,19 @@ extension StringExtention on String {
     }
     return buffer.toString();
   }
+
+  /// Splits String in chunks with the [chunkSize].
+  ///
+  /// ```dart
+  /// print('1234567890'.chunkSize(chunkSize: 3)) ->  ['12', '34', '56', '78', '90']
+  /// ```
+  ///
+  List<String> chunk({int chunkSize}) {
+    final chunked = <String>[];
+    for (var i = 0; i < this.length; i += chunkSize) {
+      final end = (i + chunkSize < this.length) ? i + chunkSize : this.length;
+      chunked.add(this.substring(i, end));
+    }
+    return chunked;
+  }
 }

@@ -62,5 +62,9 @@ void main() {
       expect('1234567890'.replaceCharacters(end: 4, replaceChar: '#'),
           '####567890');
     });
+
+    test('Test replaceCharacters', () {
+      expect('1234567890'.chunk(chunkSize: 2), ['12', '34', '56', '78', '90']);
+    });
   });
 }
