@@ -1,15 +1,22 @@
 extension BoolExtention on bool {
-  /// Return 1 if true, or 0 if false.
+  /// Return 1 if true, or 0 if false
   ///
-  ///        false.int -> 0
-  ///        true.int -> 1
+  /// ```dart
+  /// print(false.toInteger); -> 0
+  /// print(true.toInteger); -> 1
+  /// ```
   ///
-  int get integer => this ? 1 : 0;
+  int get toInteger => this ? 1 : 0;
 
-  /// Return true if false, or false if true.
+  /// Toggle bool
   ///
-  ///        false.toggle() -> true
-  ///        true.toggle() -> false
+  /// ```dart
+  /// print(false.toggle()); -> true
+  /// print(true.toggle()); -> false
+  /// ```
   ///
-  // bool get toggle => this = !this;
+  bool toggle() {
+    var value = this;
+    return value = !value;
+  }
 }
