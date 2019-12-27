@@ -178,4 +178,42 @@ extension StringExtention on String {
     }
     return chunked;
   }
+
+  /// Add a [char] at a [position] with the String.
+  ///
+  /// The boolean [repeat] defines whether to add the [char] at every [position].
+  /// If [position] is greater than the length of String, it will return String.
+  /// If [repeat] is true and [position] is 0, it will return String.
+  ///
+  ///  ```dart
+  /// print('1234567890'.addCharAtPosition('-', 5)) ->  '12345-67890'
+  /// print('1234567890'.addCharAtPosition('-', 5)) ->  '123-456-789-0'
+  /// ```
+  ///
+  String addCharAtPosition(
+    String char,
+    int position, {
+    bool repeat = false,
+  }) {
+    if (!repeat) {
+      if (this.length < position) {
+        return this;
+      }
+      final before = this.substring(0, position);
+      final after = this.substring(position, this.length);
+      return before + char + after;
+    } else {
+      if (position == 0) {
+        return this;
+      }
+      final buffer = StringBuffer();
+      for (var i = 0; i < this.length; i++) {
+        if (i != 0 && i % position == 0) {
+          buffer.write(char);
+        }
+        buffer.write(String.fromCharCode(this.runes.elementAt(i)));
+      }
+      return buffer.toString();
+    }
+  }
 }
