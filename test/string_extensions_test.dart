@@ -55,5 +55,22 @@ void main() {
       expect('test@test.com'.isValidEmail, true);
       expect('apple'.isValidEmail, false);
     });
+
+    test('Test replaceCharacters', () {
+      expect('1234567890'.replaceCharacters(), '*****67890');
+      expect('1234567890'.replaceCharacters(begin: 3, end: 8), '123*****90');
+      expect('1234567890'.replaceCharacters(end: 4, replaceChar: '#'),
+          '####567890');
+    });
+
+    test('Test replaceCharacters', () {
+      expect('1234567890'.chunk(chunkSize: 2), ['12', '34', '56', '78', '90']);
+    });
+
+    test('Test addCharAtPosition', () {
+      expect('1234567890'.addCharAtPosition('-', 5), '12345-67890');
+      expect('1234567890'.addCharAtPosition('-', 3, repeat: true),
+          '123-456-789-0');
+    });
   });
 }
