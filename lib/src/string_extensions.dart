@@ -134,6 +134,7 @@ extension StringExtention on String {
   /// print('1234567890'.replaceCharacters(begin: 3, end: 8)) -> 123*****90
   /// print('1234567890'.eplaceCharacters(end: 4, replaceChar: '#')) -> ####567890
   /// ```
+  ///
   String replaceCharacters({
     int begin = 0,
     int end,
